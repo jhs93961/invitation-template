@@ -14,8 +14,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/invitation-template" : "";
   return (
     <html lang="en">
+      <meta name="title" content="invitation template" />
+      <meta name="description" content="강훈이 청첩장 만들기" />
+      <meta
+        property="og:url"
+        content="https://jhs93961.github.io/invitation-template"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="invitation template" />
+      <meta property="og:description" content="강훈이 청첩장 만들기" />
+      <meta
+        property="og:image"
+        content="https://jhs93961.github.io/invitation-template/test.png"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <body className={inter.className}>{children}</body>
     </html>
   );

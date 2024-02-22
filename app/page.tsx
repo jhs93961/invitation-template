@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 export default function Home() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/invitation-template' : '';
+  const basePath =
+    process.env.NODE_ENV === "production" ? "/invitation-template" : "";
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -40,7 +41,13 @@ export default function Home() {
         />
       </div>
       <div className="relative flex place-items-center">
-        <span>with <b><span style={{ color: 'green' }}>NH</span> <span style={{ color: 'blue' }}>Choi</span></b></span>
+        <span>
+          with{" "}
+          <b>
+            <span style={{ color: "green" }}>NH</span>{" "}
+            <span style={{ color: "blue" }}>Choi</span>
+          </b>
+        </span>
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
